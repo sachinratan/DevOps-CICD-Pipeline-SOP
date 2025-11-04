@@ -27,4 +27,4 @@ Kubernetes settings:
 
 ![alt text](https://github.com/sachinratan/k8s-dkr-cicd/blob/main/jnks_add_cloud_1.png)
 
-![alt text](https://github.com/sachinratan/k8s-dkr-cicd/blob/main/jnks_add_cloud_2.png)
+![alt text](https://github.com/sachinratan/k8s-dkr-cicd/blob/main/jnks_add_cloud_3.png)
