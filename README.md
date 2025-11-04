@@ -152,8 +152,9 @@ spec:
   selector:
     app: jenkins
 EOF
-
-Step 6: For ALB setup, create Ingress:
+```
+## Step 6: For ALB setup, create Ingress:
+```
 $ kubectl apply -f - <<EOF
 # jenkins-ingress.yaml
 apiVersion: networking.k8s.io/v1
