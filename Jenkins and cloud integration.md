@@ -15,7 +15,7 @@ Go to path `Jenkins >> Manage Jenkins >> Clouds >> New cloud` and give the name 
 
 ![alt text](https://github.com/sachinratan/k8s-dkr-cicd/blob/main/miscellaneous-data/jnks_add_cloud.png)
 
-Configure the cloud with following kubernetes setting:
+2.a: Configure the cloud with following kubernetes setting:
 ```
 Kubernetes settings:
 - Name: kubernetes
@@ -28,3 +28,15 @@ Kubernetes settings:
 ![alt text](https://github.com/sachinratan/k8s-dkr-cicd/blob/main/miscellaneous-data/jnks_add_cloud_1.png)
 
 ![alt text](https://github.com/sachinratan/k8s-dkr-cicd/blob/main/miscellaneous-data/jnks_add_cloud_3.png)
+
+Step 3: Configure the pod template:
+
+Go to `Jenkins >> Manage Jenkins >> Clouds >> select the configured cloud name (Amazon_EKS) >> Select pod template >> New pod template`
+
+![alt text](https://github.com/sachinratan/k8s-dkr-cicd/blob/main/miscellaneous-data/jnks_add_pod_template.png)
+
+You can configure jenkins agent pod template with following pod configurations
+
+![alt text](https://github.com/sachinratan/k8s-dkr-cicd/blob/main/miscellaneous-data/jnks_add_pod_template_config.png)
+![alt text](https://github.com/sachinratan/k8s-dkr-cicd/blob/main/miscellaneous-data/jnks_add_template_config_1.png)
+![alt text](https://github.com/sachinratan/k8s-dkr-cicd/blob/main/miscellaneous-data/jnks_add_pod_template_config_2.png)
