@@ -108,6 +108,22 @@ Go to path `Jenkins >> Manage Jenkins >> Clouds >> New cloud` and give the name 
 
 Next, configure the following details from the target k8s cluster.
 
+```
+Name: target-eks-cloud
+Kubernetes URL: https://[YOUR-CLUSTER-ENDPOINT]
+Kubernetes Namespace: jenkins
+Credentials: [Select the new kubeconfig credential]
+Jenkins URL: http://jenkins-service.jenkins.svc.cluster.local:8080
+
+Pod Labels:
+  jenkins: slave
+
+Pod Template:
+  Name: eks-agent
+  Namespace: jenkins
+  Service Account: jenkins-sa
+```
+
 ![alt text](https://github.com/sachinratan/k8s-dkr-cicd/blob/main/miscellaneous-data/jnks-add-ext-cloud.png)
 
 ![alt text](https://github.com/sachinratan/k8s-dkr-cicd/blob/main/miscellaneous-data/jnks-add-ext-cloud-2.png)
