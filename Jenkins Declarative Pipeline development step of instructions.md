@@ -88,10 +88,10 @@ spec:
     }
   }
     environment {
-        REPO_URL = '559781698655.dkr.ecr.eu-central-1.amazonaws.com'
+        REPO_URL = '<AWS_ACC_NO>.dkr.ecr.eu-central-1.amazonaws.com'
         BRANCH = 'main' // Or your desired branch
         ECR_REPO_NAME = 'git-jenkins-pipeline-repo'
-        AWS_ACCOUNT_ID = '559781698655'
+        AWS_ACCOUNT_ID = '<AWS_ACC_NO>'
         AWS_DEFAULT_REGION = 'eu-central-1'
         K8S_CLUSTER_NAME = 'sandbox-env-cluster'
         K8S_NAMESPACE = 'default'
