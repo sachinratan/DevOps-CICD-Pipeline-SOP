@@ -3,12 +3,12 @@ First, generate an SSH key pair that will be used for authentication:
 
 bash
 
-# On your local machine or any system with ssh-keygen
+#### On your local machine or any system with ssh-keygen
 ssh-keygen -t ed25519 -C "sachinshinde741@gmail.com" -f jenkins-github-key
 
-# This creates two files:
-# - jenkins-github-key (private key)
-# - jenkins-github-key.pub (public key)
+#### This creates two files:
+##### - jenkins-github-key (private key)
+##### - jenkins-github-key.pub (public key)
 
 Note: If your system doesn't support ed25519, use RSA instead:
 
