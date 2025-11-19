@@ -49,3 +49,14 @@ $ kubectl debug -it -n kube-system --image=aws_cli:latest <controller_pod_name> 
 ```
 $ for node in $(kubectl get nodes --no-headers | "awk '{print $1}'); do kubectl uncordon $node; done
 ```
+
+#### - Patch deployment examples:
+- To patch the individual deployment:
+```
+$ kubectl patch deployments <deployment_name> -n <namespace> -p '{"spec": {"template": {"spec": {"nodeSelector": {"<key>": "<value>"}}}}}' 
+```
+- To patch all the deployment from within the namespace:
+```
+$ for deploy in $(kubectl get deployments -o custom-columns=NAME:.metadata.name --no-headers); do kubectl patch deployment $deploy -p '{"spec": {"template": {"spec": {"nodeSelector": {"<key>": "<value>"}}}}}';  done
+```
+##### - Note: Replace the namespace, deployment name, and node selector label key value accordingly.
