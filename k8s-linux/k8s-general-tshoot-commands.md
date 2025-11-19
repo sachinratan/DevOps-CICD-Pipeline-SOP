@@ -72,3 +72,16 @@ $ curl -kso /dev/null -w "\n===============\n
 | Total: %{time_total}\n
 | HTTP Code: %{http_code}\n===============\n" https://<replace_with_destination_service_domain_name>/
 ```
+#### Kubernetes node enable disable scheduling
+- Get node name
+```
+$nodes=$(kubectl get node --no-headers -o custom-columns=NAME:.metadata.name)
+```
+- Marking the nodes in schedulingDisabled state
+```
+$for node in $nodes; do echo "Node: $node"; kubectl cordon "$node"; done
+```
+- Enabling the node for scheduling the pods
+```
+$for node in $nodes; do echo "Node: $node"; kubectl uncordon "$node"; done
+```
