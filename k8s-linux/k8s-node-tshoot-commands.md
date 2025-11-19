@@ -40,4 +40,7 @@ spec:
 EOF
 ```
 
-#### 
+#### Attach the debug container and run the troubleshooting command:
+```
+kubectl debug -it -n kube-system --image=aws_cli:latest <controller_pod_name> -n kube-system -- bash
+```
