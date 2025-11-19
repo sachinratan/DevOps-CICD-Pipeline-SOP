@@ -1,4 +1,4 @@
-## This guide will provide the useful Kubernetes node troubleshooting related commands.
+## This guide will provide the useful Kubernetes general troubleshooting related commands.
 
 #### Debug Pod Approach (Create a debug pod with network access to the node): 
 ```
@@ -42,5 +42,5 @@ EOF
 
 #### Attach the debug container and run the troubleshooting command:
 ```
-kubectl debug -it -n kube-system --image=aws_cli:latest <controller_pod_name> -n kube-system -- bash
+$ kubectl debug -it -n kube-system --image=aws_cli:latest <controller_pod_name> -n kube-system -- bash
 ```
