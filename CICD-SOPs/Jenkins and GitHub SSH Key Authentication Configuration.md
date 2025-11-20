@@ -20,7 +20,7 @@ cat jenkins-github-key.pub
 ```
 - Add to GitHub:
 
-- - Go to GitHub.com and log in
+-- Go to GitHub.com and log in
 - - Click your profile picture → Settings
 - - Click SSH and GPG keys (left sidebar)
 - - Click New SSH key
