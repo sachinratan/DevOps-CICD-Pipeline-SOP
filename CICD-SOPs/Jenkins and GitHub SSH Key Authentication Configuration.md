@@ -20,33 +20,32 @@ cat jenkins-github-key.pub
 ```
 - Add to GitHub:
 
--- Go to GitHub.com and log in
-- - Click your profile picture → Settings
-- - Click SSH and GPG keys (left sidebar)
-- - Click New SSH key
-- - Title: Jenkins Kubernetes Slave
-- - Key type: Authentication Key
-- - Paste the public key content
-- - Click Add SSH key
+  - Go to GitHub.com and log in
+  - Click your profile picture → Settings
+  - Click SSH and GPG keys (left sidebar)
+  - Click New SSH key
+  - Title: Jenkins Kubernetes Slave
+  - Key type: Authentication Key
+  - Paste the public key content
+  - Click Add SSH key
 
 #### Step 3: Add Private Key to Jenkins Credentials
 - Access Jenkins:
-- - Go to Jenkins dashboard
-- - Navigate to Manage Jenkins → Manage Credentials
+  - Go to Jenkins dashboard
+  - Navigate to Manage Jenkins → Manage Credentials
 - Add SSH Credential:
-
-- - Click on (global) domain
-- - Click Add Credentials
+  - Click on (global) domain
+  - Click Add Credentials
 - Configure as follows:
-- Kind: SSH Username with private key
-- ID: github-ssh-key (you're already using this)
-- Description: GitHub SSH Key for Code Push
-- Username: git (important: use "git", not your GitHub username)
-- Private Key: Select Enter directly
-- Click Add and paste your private key content (from jenkins-github-key file)
-- Passphrase: Leave empty (unless you set one during key generation)
-- Click Create
-- 
+  - Kind: SSH Username with private key
+  - ID: github-ssh-key (you're already using this)
+  - Description: GitHub SSH Key for Code Push
+  - Username: git (important: use "git", not your GitHub username)
+  - Private Key: Select Enter directly
+  - Click Add and paste your private key content (from jenkins-github-key file)
+  - Passphrase: Leave empty (unless you set one during key generation)
+  - Click Create
+  - 
 #### Step 4: Configure Jenkins Pod Template
 - Ensure your Kubernetes pod template includes Git and SSH client:
 
