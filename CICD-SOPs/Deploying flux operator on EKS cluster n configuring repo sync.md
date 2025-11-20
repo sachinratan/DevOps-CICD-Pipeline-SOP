@@ -97,7 +97,7 @@ kubectl apply -f git-repository.yaml
 ```
 
 ##### Monitor Flux Synchronization
-```
+
 ###### - Check HelmRepository status
 ```
 kubectl get helmrepositories -n flux-system
